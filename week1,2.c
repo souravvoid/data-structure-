@@ -3,12 +3,13 @@
 #include <stdlib.h>
 int main()
 {
-    int n;
+    
     int T;
     printf("value of T : ");
     scanf("%d", &T);
     while (T--)
     {
+        int n;
         printf("Enter value of n :");
         scanf("%d", &n);
         int arr[n];
