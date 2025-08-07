@@ -1,4 +1,5 @@
-#include <stdio.h>
+
+/*#include <stdio.h>
 #include <limits.h>
 #include <stdlib.h>
 int main()
@@ -18,6 +19,7 @@ int main()
         {
             scanf("%d", &arr[i]);
         }
+
         int a, b, idx1 = -1, idx2 = -1, dis;
         printf("Enter value of a and b :");
         scanf("%d%d", &a, &b);
@@ -42,3 +44,27 @@ int main()
         }
     }
 }
+
+
+*/
+#include <stdio.h>
+#include <limits.h>
+#include <stdlib.h>
+int main()
+{
+    
+    int T;
+    printf("value of T : ");
+    scanf("%d", &T);
+    while (T--)
+    {
+        int n,*arrp;
+        printf("Enter value of n :");
+        scanf("%d", &n);
+        arrp = (int*)malloc(sizeof(int));
+        printf("enter elements : ");
+        for (int i = 0; i < n; i++)
+        {
+            scanf("%d", (arrp+i));
+        }
+        
