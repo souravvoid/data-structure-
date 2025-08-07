@@ -1,5 +1,5 @@
 
-/*#include <stdio.h>
+#include <stdio.h>
 #include <limits.h>
 #include <stdlib.h>
 int main()
@@ -19,34 +19,33 @@ int main()
         {
             scanf("%d", &arr[i]);
         }
-
-        int a, b, idx1 = -1, idx2 = -1, dis;
-        printf("Enter value of a and b :");
-        scanf("%d%d", &a, &b);
-        for (int i = 0; i < n; i++)
-        {
-            if (arr[i] == a)
-            {
-                idx1 = i;
-            }
-            else if (arr[i] == b)
-            {
-                idx2 = i;
-            }
-            if (idx1 != -1 && idx2 != -1)
-            {
-                if (abs(idx1 - idx2) < dis)
-                {
-                    dis = abs(idx1 - idx2);
-                    printf("Distance is: %d\n", dis);
+        int a,b;
+        scanf("%d",&a);
+        scanf("%d", &b);
+        int min_dis = INT_MAX;
+        int prev =-1;
+        for(int i=0;i<n;i++){
+            if(arr[i]==a||arr[i]==b){
+                if(prev!=-1 && arr[i]!=arr[prev]){
+                    int dist = i- prev;
+                    if(dist <min_dis){
+                        min_dis=dist;
+                    }
                 }
             }
+            prev =i;
         }
     }
+    if(min_dis == INT_MAX){
+        printf("-1");
+    }else{
+        printf("%d",min_dis);
+    }
 }
+      
 
 
-*/
+/*
 #include <stdio.h>
 #include <limits.h>
 #include <stdlib.h>
@@ -67,4 +66,8 @@ int main()
         {
             scanf("%d", (arrp+i));
         }
+        int a,b,index1 = -1 ,index2 = -1;
         
+
+
+*/
