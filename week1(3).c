@@ -3,7 +3,7 @@
 int main()
 {
     int T;
-    printf("enter the how many test case you want try:")
+    printf("enter the how many test case you want try:");
     scanf("%d",&T);
     while(T--)
     {
