@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-int isvalid( char s[100] )
+int isvalid( char s[200] )
 {
     int  max_len = 0 ,left =0 ,right =0  ;
     for(int i =0 ; i<strlen(s)-1;i++)
@@ -15,7 +15,7 @@ int isvalid( char s[100] )
         if left == right
         {
          max_len = max(max_len,2*right);
-        }
+        
         else if right> left
                left = 0;
                right = 0 ;
